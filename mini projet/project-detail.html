@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Digital Trend - Project Detail</title>
+     <script src = 'java.js' type = "text/javascript" ></script>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <link rel="stylesheet" href="css/templatemo-digital-trend.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg position-relative">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <i class="fa fa-line-chart"></i>
+              Evaporation & Cristallisation application
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html#about" class="nav-link">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#project" class="nav-link">Industry</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html#ana" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <section class="project-detail section-padding-half">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-9 mx-auto col-md-10 col-12 mt-lg-5 text-center" data-aos="fade-up">
+
+                      <h4>Application de prédiction des outputs d'un atelier d'évaporation-cristallisation</h4>
+
+                      <h7> Afin de contrôler la production de <b> NaC2H3O2.3 H₂O </b> on a mettre en place une application de prédiction des outputs du procédé selon les débits d'entrée avec concentration une fraction massique de <b> 0,2 de Na acétate. </b>
+                        Le procédé se compose d'une installation d'évaporation continu fonctionnant à <b> 60°C, </b> à la sortie de l'évaporateur (SE) la concentration la solution est titrée de <b> 50% de NaAc. </b>
+                        SE alimente un cristallisoir qui fonctionne à <b> 20 °C, </b> après une filtration la solution saturée est recyclée en totalité vers l'évaporateur, le solide sortant du cristallisoir est Na acétate trihydraté.
+                      </h7>
+                    </br></br>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <div class="full-image text-center" data-aos="zoom-in">
+      <h4>Diagramme de phase Eau - Na acetate</h4>
+       <img src="images/project/project-detail/diag.png" class="img-fluid" alt="interview process">
+     </div>
+
+
+     <section class="project-detail section-padding">
+      
+          <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-md-6 col-12 mb-5">
+                  <p></p> </br></br>
+                  <form action="#" method="post" id = "debit" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+
+                        <div class="row">
+                          <div class="col-lg-6 col-12">
+                          <input type="number" class="form-control" name="A" id = "A" placeholder="entrez le débit en Kg/h" min = 850 max = 1200>
+                          </div>
+                          <div class="col-lg-5 mx-auto col-7">
+                            <input type="button" onclick="calcul();" class="form-control" id="submit-button" name="submit" value = "Calculer!"></button>
+                          </div>
+                        </br></br>
+                      <div>
+                      </br><p class="mt-12 mb-4">Débit de cristaux filtrés :    </p>
+                      </div>
+                      <div>
+                      <input type="text" class="form-control" name="C" id = "C">
+                      </div> <label> </br> Kg/h</label>
+                      <div>
+                      </br><p class="mt-12 mb-4">Débit d'eau à évaporer :    </p>
+                      </div>
+                      <div>
+                      <input type="text" class="form-control" name="V" id = "V">
+                      </div> </br> Kg/h</label>
+                      <div>
+                      </br><p class="mt-12 mb-4">Débit eau mère recyclé:    </p>
+                      </div>
+                      <div>
+                      <input type="text" class="form-control" name="L" id = "L">
+                      </div></br> Kg/h</label>
+                      <div>
+                      </br><p class="mt-12 mb-4">La fraction massiquexL:    </p>
+                    </div>
+                    <div>
+                    <input type="text" class="form-control" name="xL" id = "xL">
+                    </div>
+                      <div>
+                      </br><p class="mt-12 mb-4">Rendement de l'installa:    </p>
+                      </div>
+                      <div>
+                      <input type="text" class="form-control" name="R" id = "R">
+                      </div></br> % </label>
+                        </div>
+                    </div>
+                  </form>
+
+                    <div class="col-lg-5 col-md-6 mr-lg-auto mt-lg-5 col-12" data-aos="fade-up" data-aos-delay="200">
+                      <p class="mt-3 mb-4">Selon les données opératoire : le débit A varie entre 850 Kg/h et 1200 kg/h.</br>
+                        <p class="mt-3 mb-4">D'après le diagramme binaire, la température TE et TC doit varier dans la zone où il y a (Liquide + SAT)" entre -17°C et 58°C".</br>
+
+                      <h2>Output de l'application :</h2>
+
+                      <p class="mt-3 mb-4">On cherche à prédire :</p>
+
+                      <ul class="list-detail">
+                        <li><span>Les débits massiques de cristaux filtrés ;</span></li>
+                        <li><span>Le débit d'eau à évaporer dans l'évaporateur ;</span></li>
+                        <li><span>Le débit d'eaux mères recyclées vers l'évaporateur ;</span></li>
+                        <li><span>Le rendement de l'installation, la sensibilité des température de l'évaporation et cristallisation sur le rendement de l'installation.</span></li>
+                      </ul>
+                    </div>
+               </div>
+
+      
+                <div class="container">
+                     <div class="row">
+                     </br></br>
+                      <h2>Etude de la sensibilité des températures sur <strong>rendement de l'installation</strong> :</h2>
+                        <div class="col-lg-6 col-md-6 col-12 mb-5">
+                        <p></p> </br></br>
+                        <form action="#" method="post" id = "temp" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+      
+                              <div class="row">
+                                <div class="col-lg-6 col-12">
+                                <input type="number" class="form-control" name="TE" id = "TE" placeholder="entrez T(°C) d'evaporateur">
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                  <input type="number" class="form-control" name="TC" id = "TC" placeholder="entrez T(°C) de cristallisoir">
+                                  </div>
+                                  <div class="col-lg-6 col-12">
+                                    <input type="number" class="form-control" name="Aa" id = "Aa" placeholder="entrez le débit en Kg/h">
+                                    </div>
+                                <div class="col-lg-5 mx-auto col-7">
+                                  <input type="button" onclick="calcula();" class="form-control" id="submit-button" name="submit" value = "Calculer!"></button>
+                                </div>
+                              </br></br>
+                            <div>
+                            </br><p class="mt-12 mb-4">La fraction massiquexB:    </p>
+                          </div>
+                          <div>
+                          <input type="text" class="form-control" name="xB" id = "xB">
+                          </div>
+                          <div>
+                            </br><p class="mt-12 mb-4">Débit de cristaux filtrés :    </p>
+                            </div>
+                            <div>
+                            <input type="text" class="form-control" name="Ca" id = "Ca">
+                            </div> <label> </br> Kg/h</label>
+                            <div>
+                            </br><p class="mt-12 mb-4">Débit d'eau à évaporer :    </p>
+                            </div>
+                            <div>
+                            <input type="text" class="form-control" name="Va" id = "Va">
+                            </div> </br> Kg/h</label>
+                            <div>
+                            </br><p class="mt-12 mb-4">Débit eau mère recyclé:    </p>
+                            </div>
+                            <div>
+                            <input type="text" class="form-control" name="La" id = "La">
+                            </div></br> Kg/h</label>
+                            <div>
+                            </br><p class="mt-12 mb-4">La fraction massiquexL:    </p>
+                          </div>
+                          <div>
+                          <input type="text" class="form-control" name="xLa" id = "xLa">
+                          </div>
+                            <div>
+                            </br><p class="mt-12 mb-4">Rendement de l'installa:    </p>
+                            </div>
+                            <div>
+                            <input type="text" class="form-control" name="Ra" id = "Ra">
+                            </div></br> % </label>
+                              </div>
+                          </div>
+                        </form>
+      
+                          <div class="col-lg-5 col-md-6 mr-lg-auto mt-lg-5 col-12" data-aos="fade-up" data-aos-delay="200">
+                          </br>
+                            <p class="mt-3 mb-4">Selon les données opératoire : le débit A varie entre 850 Kg/h et 1200 kg/h.</br>
+                              <p class="mt-3 mb-4">D'après le diagramme binaire, la température TE et TC doit varier dans la zone où il y a (Liquide + SAT)" entre -17°C et 58°C".</br>
+                            </br></br>
+                            <p class="mt-3 mb-4">Dans la partie ci-dessus nous avons étudié <strong>l'évaporation et la cristallisation</strong> à des températures très précises (60°C et 20°C), dans cette partie nous étudierons l'évaporation et la cristallisation aux températures de votre choix !</p>
+                          </div>
+                     </div>
+      
+            
+              <div class="col-lg-9 mx-auto col-12" data-aos="fade-up">
+                <div class="client-info mt-lg-5 py-lg-5">
+                    <h3>La cristallisation, au sens large du terme, est un changement d’état qui conduit, à partir d’une phase gazeuse 
+                      ou liquide, à un solide appelé cristal, de structure régulière et organisée.
+                      Les cristaux font partie intégrante de notre vie de tous les jours.</h3>
+
+                    <div class="d-flex align-items-center mt-3">
+                      <img src="images/project/project-detail/male-avatar.png" class="img-fluid" alt="male avatar">
+
+                      <p>Zineelabidine BAKHER, Professor at University HASSAN 1st-Morocco</p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-12">
+                <div class="embed-responsive embed-responsive-16by9 my-5 py-5" data-aos="fade-up">
+                    <iframe class="embed-responsive-item" width="800" height="450" src="https://www.youtube.com/embed/vi_SJBnxmHo?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+          </div>
+     </section>
+
+
+     <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Best thanks to Pr. <strong> <a href="https://www.zbakher.com/index_en.html" target="_blank" >Zineelabidine</strong> </a> BAKHER.</h1>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="my-4">Contact Info</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-phone mr-2 footer-icon"></i> 
+              +212 677 052 682
+            </p>
+
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                elmouih.a.fst@uhp.ac.ma
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="my-4">Faculty adress</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-home mr-2 footer-icon"></i> 
+              577, Casablanca road, Settat (Morocco).
+            </p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+            <p class="copyright-text">Copyright &copy; 2021 FST@S
+            <br>
+            Powered by: PIC9</p>
+          </div>
+
+          
+
+          <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+               <ul class="social-icon">
+                 <li><a href="https://www.linkedin.com/in/abdelkrim-elmouih" target="_blank" class="fa fa-linkedin"></a></li>
+                 <li><a href="https://twitter.com/AbdeLkarimELMO" target="_blank" class="fa fa-twitter"></a></li>
+                 <li><a href="https://www.instagram.com/abdel.karim.el/" target="_blank" class="fa fa-instagram"></a></li>
+                 <li><a href="https://www.facebook.com/Abdelkariimel" target="_blank" class="fa fa-facebook"></a></li>
+               </ul>
+             </div>
+
+        </div>
+      </div>
+    </footer>
+
+
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
